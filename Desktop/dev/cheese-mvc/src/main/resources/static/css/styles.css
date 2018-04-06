@@ -1,0 +1,39 @@
+html{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
+    background-color: #E16722;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+h1{
+    text-align: center;
+    color: #F7E725;
+    font-family: Brush Script MT, cursive;
+    font-size: 60px;
+}
+span{
+    color: #F7E725;
+    font-family: Courier New;
+}
+p{
+    color: #F7E725;
+    font-family: Courier New;
+}
+.error{
+    color: red;
+}
+td{
+text-align: right;
+}
+nav{
+text-align: center;
+font-family: Copperplate, fantasy;
+}
+.submission{
+font-family: Papyrus, fantasy;
+font-size: 15px;
+}

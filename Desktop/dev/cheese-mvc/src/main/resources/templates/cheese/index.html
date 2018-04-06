@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org/">
-<head>
-    <meta charset="UTF-8" />
-    <title th:text="${title}">Title</title>
-</head>
+<html lang="en" xmlns:th="http://thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
 <body>
-    <h1 th:text="${title}">Default Title</h1>
-    <p th:unless="${cheeses} and ${cheeses.size()}">no cheese :(</p>
-    <a href="/cheese/add">Add Cheese</a>
+<h1 th:text="${title}">Default Title</h1>
+
+<nav th:replace="fragments :: navigation"></nav>
+
+<p th:unless="${cheeses} and ${cheeses.size()}">no cheese :(</p>
+
 <ul>
-    <li th:each="cheese: ${cheeses}" th:text="${cheese}"></li>
+    <li th:each ="cheese : ${cheeses}">
+        <span>Type of Cheese: </span>
+        <span th:text="${cheese.key}"></span>
+        <br/>
+        <span>Characteristics: </span>
+        <span th:if="${cheese.value.isEmpty()}">No Characteristics given.</span>
+        <span th:unless="${cheese.value.isEmpty()}"><span th:text="${cheese.value}"></span></span>
+        <hr width="35%" align="left" color="brown"/>
+
+    </li>
 </ul>
 </body>
 </html>
